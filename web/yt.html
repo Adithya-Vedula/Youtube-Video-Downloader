@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="/eel.js"></script>
+        <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
+        <title>YT Video Downloader</title>
+
+    </head>
+    <body>
+    <div class="login-box">
+    <h2>YT Video Downloader</h2>
+    <br>
+    <h3><font color="white">Enter the URL of the video/playlist you want to download.</font></h3>
+    <form>       
+        <div class="user-box">
+            <br>
+            <input type="text" name="" required="" id="url">
+            <label>Url</label>
+            <h3><font color="white">Enter the full path where you want to save the Youtube Video,eg:'C:\Users\user\Downloads'</font></h3>            
+          </div>
+          <div class="user-box">
+            <br>            
+            <input type="text" name="" required="" id="path">
+            <label>Path</label>
+          </div>
+      
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <button onclick="data()">Download the video.</button>
+      </a>  
+    <div>  
+      <p><label><font color="white" fontsize="14px">Wait for a while after clicking the download button.<br>You will get a popup window that the video has been downloaded.</font></label></p>
+    </div>        
+    </form>
+  </div>
+  <script>
+            url = document.getElementById("url");
+            path = document.getElementById("path");
+            function data(){
+            //  name , address , nation , date_of_birth , image , gender
+                eel.send_data(url.value , path.value);
+            }    
+  </script>
+  </body>
+</html>  
